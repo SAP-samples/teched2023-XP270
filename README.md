@@ -1,6 +1,6 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2023-XP270)](https://api.reuse.software/info/github.com/SAP-samples/teched2023-XP270)
 
-# Session ID - Session Title
+# Session ID - [XP270 - Reduce Your Operation Efforts for SAP BTP with SAP Cloud ALM	2](#_toc147778990)
 
 ## Description
 
