@@ -4,15 +4,20 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2022 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2023 session XP270 - Reduce Your Operation Efforts for SAP BTP with SAP Cloud ALM
+Get a detailed overview of the health monitoring capabilities in SAP Cloud ALM. Learn to monitor your cloud application running on SAP Business Technology Platform (SAP BTP) and SAP HANA Cloud. Find out how to use the SAP Automation Pilot service (triggered from health monitoring) for automated event remediation.  
+
 
 ## Overview
 
-This session introduces attendees to...
+TYou will setup and use health monitoring for a customer developed application deployed  in a SAP BTP Cloud Foundry subaccount. Eventually SAP Cloud ALM will trigger an alert that something is not in order with the application. You will define an automation pilot command for automated event remediation and trigger it from the alert in SAP Cloud ALM. Afterwards you will check in monitoring that the command has solved the problem.
 
 ## Requirements
 
 The requirements to follow the exercises in this repository are...
+•	Very basic knowledge in BTP Cockpit
+•	Please use the Chrome browser on your Teched laptop
+
 
 ## Exercises
 
