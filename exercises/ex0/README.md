@@ -33,19 +33,24 @@ This destination points to the SAP Cloud ALM tenant responsible for monitoring. 
 10.	Click on the application name ‘perfumestoreXX’ .
 11.	Select User Provided Variables. Check the variable JBP_CONFIG_JAVA_OPTS
 <br>![](/exercises/ex0/images/008.png)
-
-7.	
+Explanation:
+To enable monitoring metric collection in a custom application the Open Telemetry Java Agent and the SAP Otel Extensions must be instrumented in the application. For the perfumestore app this has already been done. The following parameters are set:
 ``` abap
- DATA(params) = request->get_form_fields(  ).
- READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
+javaagent:BOOT-INF/lib/opentelemetry-javaagent-1.29.0.jar
+-Dotel.javaagent.enabled=true: enables the Open Telemetry Agent
+-Dotel.javaagent.extensions=BOOT-INF/lib/otel-agent-ext-java-1.5.4.jar: includes the SAP Otel Extension library
+-Dotel.resource.attributes=account=AD263-XXX,calmTenantId=<guid>: describes space name and space id of your BTP CF account
+-Dotel.service.name= perfumeStore: describes the name of the application to be shown in Cloud ALM
 ```
+The complete procedure how to instrument customer developed applications is described in the SAP Cloud ALM Expert Portal https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/data-collection-infrastructure.html
 
+12.	Select the application again.
+13.	Select Start to Start the application. 
+<br>![](/exercises/ex0/images/009.png)
+In case the the application is  started already, select restart.
+Wait until the application is in status running.
+<br>![](/exercises/ex0/images/010.png)
 ## Summary
 
-Now that you have ... 
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+Now that you have checked the prerequisites for monitoring a custom application depoyed in SAP BTP and started the application
+Continue to - [Exercise 1 - Configure Monitoring and Alerting in SAP Cloud ALM](../ex1/README.md)
