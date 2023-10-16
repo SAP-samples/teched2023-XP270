@@ -40,33 +40,53 @@ logon to automation pilot - build a clean disk command
 9.	Map the input keys to the execution you have created in the previous step:
 ![](./images/05-automation-pilot.png)
 
-10.	Commands outputs  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after rinning the command. Please follow the guidance shared below: 
+10.	Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after rinning the command. Please follow the guidance shared below: 
 ![](./images/06-automation-pilot.png)
 
 12.	Command output keys will be printed here
-![](./images/07-automation-pilot.png)
 
 Now you are ready to trigger the command manually or automatically via SAP Cloud ALM. 
 
 
 ### 2.1.2 - Command: "Delete App Temp Storage" in SAP Automation Pilot 
 
-After completing these steps you will have...
+1. Access your SAP Automation Pilot via SAP BTP cockpit  .
+![](./images/01-accessing-automation-pilot.png)
 
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc = 0.
-    response->set_status( i_code = 200
-                     i_reason = 'Everything is fine').
-    RETURN.
-  ENDIF.
+2.	Once you access the SAP Automation Pilot navigate to “Comands” section and look for a command named `HttpRequest`
+![](./images/2.1.2-pic-01.png)
+   
+3.	Access the command and clone by adding it to the respective catalog as shown on the screenshot and name it “{your session ID}.(user ID).deleteAppTemStorageDemo”, e.g. "XP270.001.deleteAppTemStorageDemo" ,  "XP270.002.deleteAppTemStorageDemo", etc.
+![](./images/2.1.2-pic-02.png)
+![](./images/2.1.2-pic-03.png)
 
-```
+4.	Add the needed input keys so that the command can be triggered and executed successfully.
+What you need to specify within the commands input keys are just two inputs:
+- `method` to be set to `GET`
+![](./images/2.1.2-pic-06.png)
+- `url` to be set to the app endpoint which can be called in order to delete the temp storage.
+![](./images/2.1.2-pic-05.png)
 
-2.	Click here.
-<br>![](/exercises/ex2/images/02_02_0010.png)
+> [!NOTE]
+> endpoint is {app_url}/delete-file
+> app_url can be found via SAP BTP Cockpit as explained here: "BTP Cockpit" --> "Spaces" --> click on the desired space (in your use case you should be able to see just one space, so click on the spacenamed "prod") --> clik on the app name (e.g. `perfumeSrore`) and you shall see the Applicaiton Overview scree. Check out the "Application Routers" URL - this is your App URL that shall be copied and used. 
+![](./images/2.1.2-pic-04.png)
+
+7.	Add the needed execution as shown below
+![](./images/04-02-automation-pilot.png)
+![](./images/04-03-automation-pilot.png)
+![](./images/2.1.2-pic-07.png)
+
+9.	Map the input keys to the execution you have created in the previous step:
+![](./images/2.1.2-pic-08.png)
+
+10.	Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after rinning the command. Please follow the guidance shared below: 
+![](./images/2.1.2-pic-09.png)
+
+12.	Command output keys will be printed here
+![](./images/2.1.2-pic-10.png)
+
+Now you are ready to trigger the command manually or automatically via SAP Cloud ALM. 
 
 
 ## Exercise 2.2 - Register command as Operation Flow in SAP Cloud ALM  
