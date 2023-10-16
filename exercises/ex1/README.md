@@ -78,27 +78,23 @@ You can also configure email notifications. This requires that you enter yoursel
 
 ## Exercise 1.4 Use health monitoring to check the health of your custom application
 
-After completing these steps you will have...
-
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-
-```
-
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
-
-
+38.	Close the configuration pane if it is still open.
+ <br>![](/exercises/ex1/images/018.png)
+39.	Select Monitoring.
+40.	Select service “XP270-XXX”.
+Click on the row to check the metric overview.  
+<br>![](/exercises/ex1/images/019.png)
+Depending on how much time passed since perfumestore app start, the metric Disk
+ utilization might already have a yellow or red rating. 
+<br>![](/exercises/ex1/images/020.png)
+41.	Select metric “Disk Utilization”
+42.	Click on “History”.
+<br>![](/exercises/ex1/images/021.png)
+ 43.	Select “Time Frame” and then choose ‘Last 1 hour’ and Resolution as ‘1 minute.’ Select Apply.
+<br>![](/exercises/ex1/images/022.png)
+ You will notice that the Disk utilization of the perfumestore app increases continuously towards the limit of 1 GB. 
+<br>![](/exercises/ex1/images/023.png)
+44.	Optionally: Check other metrics
 ## Summary
 
-You've now ...
-
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
-
+You've now configured monitoring of your custom app and detected the first problem that it consumes excessively disk space . As a next step you will configure an automated action to resolve this problem in [Exercise 2 - Build Clean Disk Command](../ex2/README.md)
