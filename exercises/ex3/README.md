@@ -25,9 +25,13 @@ Review the alert details and possible actions.
 6.	Select “Actions”-->“Start Operation Flow”.
 <br>![](/exercises/ex3/images/004.png)
 	Now you will probably see many operation flows with similar names. Search for the operation flow name with your number to ensure you select the right one. Select “Start” to trigger it.
+<br>![](/exercises/ex3/images/006.png)
 7.	Select “Operation Flows”. Verify that the operation flow you started is displayed and has status completed .
-8.	Select the Instance id to jump into the operation flow execution in SAP Automation Pilot and review the execution details
-10.	Navigate to Health Monitoring and verify that disk utilization has decreased.
+8.	Select the Instance id to jump into the operation flow execution in SAP Automation Pilot.
+<br>![](/exercises/ex3/images/007.png)
+9.	Review the execution details. Select output values to check the output.
+<br>![](/exercises/ex3/images/008.png)
+10.	Navigate to Health Monitoring. Select metric Disk Utilization -> History .Verify that disk utilization has decreased.
 11.	Navigate  to the alert and select Actions --> Confirm Alert .
 <br>![](/exercises/ex3/images/005.png)
 ## Exercise 3.3 Configure the automatic triggering of the operation flow
