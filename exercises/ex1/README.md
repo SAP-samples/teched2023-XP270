@@ -61,11 +61,10 @@ The Metrics section shows available metrics for custom applications deployed in 
 You can also configure email notifications. This requires that you enter yourself as recipient in notification management. As you are working in a shared SAP Cloud ALM, other participants will be able to see your e mail address. If you are not ok with this you can skip this part of the exercise.
 28.	Select Notification Management from the SAP Cloud ALM Launchpad.
 <br>![](/exercises/ex1/images/014.png)
- 29.	Select Add
+29.	Select Add.
 30.	Enter your email address ( which you can access during the course of this exercise)and select save.
 <br>![](/exercises/ex1/images/015.png)
  Your e mail address will appear in Notification management with status “Pending”.
-<br>![](/exercises/ex1/images/016.png)
 31.	Open your e mail inbox. You should have received a mail “Welcome to SAP Cloud ALM”. Open the mail.
 32.	Select the link in the mail to consent that you want to receive notifications from SAP Cloud ALM. After clicking on the link, a web page opens showing “You are subscribed to SAP Cloud ALM Notifications”. 
 33.	 Close and re-open the Notification Management browser window. Your e mail address should change to  status “Verified”.
