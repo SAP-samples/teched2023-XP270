@@ -60,6 +60,7 @@ As the operation flow resolves the critical situation automatically you could al
 But you wonder how you can review the event and automatically triggered actions without alert. This is possible in the Event log in the Intelligent Event Processing.
 28. Select Intelligent Event Processing from the launchpad.
 <br>![](/exercises/ex3/images/013.png)
+
 29. Open the scope selector and select service XP270-XXX. (Replace XXX with your assigned number). Select Apply.
 <br>![](/exercises/ex3/images/014.png)
 30. Review the information displayed on the  event log overview page. You see how many event situations were created in the selected time frame for the selected service, how many event situations are in status closed and open, how many event actions were triggered and how many event actions failed. The table at the bottom of the screen lists the single event situations. Select the latest event action to open the action log.
