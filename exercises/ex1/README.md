@@ -33,42 +33,50 @@ Cloud service “XP270-XXX” of type “SAP BTP, Cloud Foundry” is the repres
 <br>![](/exercises/ex1/images/06b.png)
 The Metrics section shows available metrics for custom applications deployed in a SAP BTP Cloud Foundry space. By default all metrics have no threshold.
 12.	Select metric type “CPU Utilization”
-<br>![](/exercises/ex1/images/009.png)
+<br>![](/exercises/ex1/images/008.png)
 13.	Read through the description to familiarize. 
 14.	Select threshold type “Numeric”.
 15.	Select Condition “Above”
 16.	Select threshold 70% for warning and 90% for critical. Select save.
-<br>![](/exercises/ex1/images/010.png)
+<br>![](/exercises/ex1/images/009.png)
 17.	Select metric type “Disk Utilization”
-<br>![](/exercises/ex1/images/011.png)
+<br>![](/exercises/ex1/images/010.png)
 18.	Read through the description to familiarize. 
 19.	Select threshold type “Numeric”.
 20.	Select Field “Usage”.
 21.	Select Condition “Above”.
 22.	Select threshold 70% for warning and 90% for critical. Select save.
-<br>![](/exercises/ex1/images/012.png)
+<br>![](/exercises/ex1/images/011.png)
 23.	Optional: Define thresholds for other metrics.
 
 ## Exercise 1.3 Configure Alerting
 24.	Select Events tab.
 25.	Select the event type “High Disk Utilization”. 
+<br>![](/exercises/ex1/images/012.png)
 26.	Switch on event action “Create Alert”. Select Save. 
-27.	Select Close on the ‘Configuration for Services’.```
+<br>![](/exercises/ex1/images/013.png)
+27.	Select Close on the ‘Configuration for Services’.
 
 ## Exercise 1.3 Configure email notification (optional)
 You can also configure email notifications. This requires that you enter yourself as recipient in notification management. As you are working in a shared SAP Cloud ALM, other participants will be able to see your e mail address. If you are not ok with this you can skip this part of the exercise.
 28.	Select Notification Management from the SAP Cloud ALM Launchpad.
+<br>![](/exercises/ex1/images/014.png)
  29.	Select Add
 30.	Enter your email address ( which you can access during the course of this exercise)and select save.
+<br>![](/exercises/ex1/images/015.png)
  Your e mail address will appear in Notification management with status “Pending”.
+<br>![](/exercises/ex1/images/016.png)
 31.	Open your e mail inbox. You should have received a mail “Welcome to SAP Cloud ALM”. Open the mail.
 32.	Select the link in the mail to consent that you want to receive notifications from SAP Cloud ALM. After clicking on the link, a web page opens showing “You are subscribed to SAP Cloud ALM Notifications”. 
 33.	 Close and re-open the Notification Management browser window. Your e mail address should change to  status “Verified”.
+<br>![](/exercises/ex1/images/016.png)
  34.	Navigate to Health Monitoring app and go to Event Configuration screen for service XP270-XXX.
 35.	Switch on event action “Send Email To”.
 36.	Select Add button. Select your email address. Select Save.
+<br>![](/exercises/ex1/images/017.png)
 37.	Select Close on the ‘Configuration for Services’.
 38.	Close the configuration pane if it is still open.
+
 ## Exercise 1.4 Use health monitoring to check the health of your custom application
 
 After completing these steps you will have...
