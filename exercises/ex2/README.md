@@ -64,7 +64,7 @@ Now you are ready to trigger the command manually or automatically via SAP Cloud
 What you need to specify within the commands input keys are just two inputs:
 - `method` to be set to `GET`
 ![](./images/2.1.2-pic-06.png)
-- `url` to be set to the app endpoint which can be called in order to delete the temp storage.
+- `url` - that is `{app_url}/delete-file` resulting in athe  app endpoint which can be called in order to delete the temp storage.
 ![](./images/2.1.2-pic-05.png)
 
 > [!NOTE]
