@@ -1,8 +1,7 @@
 # Exercise 3 - Check alert and resolve problem
 
-In this exercise you will check the alert information and trigger the previously defined operation flow from the alert. Afterwards you will check that this has resolved the problem. 
+In this exercise you will check the alert information and trigger the previously defined operation flow manually from the alert. Afterwards you will check that this has resolved the problem. Afterwards you will configure that the operation flow is triggered automatically the next time.
 ## Exercise 3.1 Optional : Check e mail notification 
-
 1.	If you configured e mail notification in step 1:
 Open your e mail inbox. You should have received a mail “Welcome to SAP Cloud ALM” . Open the mail. It should look similar to below.
 <br>![](/exercises/ex3/images/001.png)
@@ -27,11 +26,12 @@ Review the alert details and possible actions.
 	Now you will probably see many operation flows with similar names. Search for the operation flow name with your number to ensure you select the right one. Select “Start” to trigger it.
 <br>![](/exercises/ex3/images/006.png)
 7.	Select “Operation Flows”. Verify that the operation flow you started is displayed and has status completed .
-8.	Select the Instance id to jump into the operation flow execution in SAP Automation Pilot.
+8.	Select the instance id to jump into the operation flow execution in SAP Automation Pilot.
 <br>![](/exercises/ex3/images/007.png)
 9.	Review the execution details. Select output values to check the output.
 <br>![](/exercises/ex3/images/008.png)
-10.	Navigate to Health Monitoring. Select metric Disk Utilization -> History .Verify that disk utilization has decreased.
+10.	Navigate to Health Monitoring. Select metric Disk Utilization -> History. Verify that disk utilization has decreased.
+<br>![](/exercises/ex3/images/009.png)
 11.	Navigate  to the alert and select Actions --> Confirm Alert .
 <br>![](/exercises/ex3/images/005.png)
 ## Exercise 3.3 Configure the automatic triggering of the operation flow
@@ -47,8 +47,8 @@ Review the alert details and possible actions.
 21.	Select “Add Operation Flow”.
 22.	22.	Now you will probably see many operation flows with similar names. Search for the operation flow with your number and select it.
 23.	Close the configuration UI.
-24.	Wait until the alert appears again. (Eventually you cloud also restart the application).
-25.	Select the “High Disk Utilization” alert to open alert details.
+24.	Wait until the alert appears again. (Eventually you could also restart the application).
+25.	Select the new “High Disk Utilization” alert to open alert details.
 26.	Select Operation Flows . Check that the Operation Flow has been triggered automatically this time. 
 
 
