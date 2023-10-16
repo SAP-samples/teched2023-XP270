@@ -10,6 +10,16 @@ Get a detailed overview of the health monitoring capabilities in SAP Cloud ALM. 
 
 You will setup and use SAP Cloud ALM Health Monitoring for a customer developed application deployed  in a SAP BTP Cloud Foundry subaccount. Eventually SAP Cloud ALM will trigger an alert that something is not in order with the application. You will define an automation pilot command for automated event remediation and trigger it from the alert in SAP Cloud ALM. Afterwards you will check in monitoring that the command has solved the problem.
 
+## Solution Digram explained
+![](./images/solution-diagram.png)
+
+### Main concept
+We use SAP Cloud ALM – Health Monitoring for monitoring of a custom developed Java app running on BTP Cloud Foundry Runtime. In case there is an incident with the app, there is an alert generated SAP Cloud ALM which triggers the execution of corrective action performed on SAP BTP by SAP Automation Pilot.​
+
+### Automated scenario​
+As an alert about high app disk storage comes up in SAP Cloud ALM, a command in SAP Automation Pilot is triggered automatically that clears the temp storage and / or restarts the app (if needed). The output of the command is then automatically sent via a notification.​
+
+
 ## Requirements
 
 The requirements to follow the exercises in this repository are: 
