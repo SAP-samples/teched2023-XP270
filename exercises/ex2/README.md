@@ -6,10 +6,6 @@ You inform the developer of the `perfumeStore` app of the disk utilization probl
 
 During this exercise you will create a command to clean the disk space using SAP Automation Pilot and register the command as operation flow in SAP Cloud ALM. 
 
-> [!Note]
-> You will get to know better SAP Automation Pilot so feel free to check out this product capabilities overview as well.
-![](.images/autopi-functional-overview.png) 
-
 ## Exercise 2.1 - Define commmands for an automated remediations via SAP Automation Plot   
 
 ### 2.1.1 - Command: "Restart App" in SAP Automation Pilot 
@@ -33,6 +29,8 @@ During this exercise you will create a command to clean the disk space using SAP
 ![](./images/input-keys-1.png)
 ![](./images/input-keys-2.png)
 
+
+![](.images/autopi-functional-overview.png)
 
 7.	Add the needed execution as shown below
 ![](./images/04-02-automation-pilot.png)
