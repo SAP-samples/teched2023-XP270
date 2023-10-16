@@ -5,6 +5,7 @@ In this exercise you will check the alert information and trigger the previously
 
 1.	If you configured e mail notification in step 1:
 Open your e mail inbox. You should have received a mail “Welcome to SAP Cloud ALM” . Open the mail. It should look similar to below.
+<br>![](/exercises/ex3/images/001.png)
 
 ## Exercise 3.2 Check alert and trigger operation flow manually
 Logon Data
@@ -17,14 +18,18 @@ Please replace the **XXX** in the user name with your assigned number,
 2.	Logon to SAP Cloud ALM.
 3.	Select “Health Monitoring”.
 4.	Select the number besides “Open alerts” to open the alert list or select “alerting” in the left panel.
+<br>![](/exercises/ex3/images/002.png)
 5.	Select the “High Disk Utilization” alert to open alert details.
+<br>![](/exercises/ex3/images/003.png)
 Review the alert details and possible actions.
 6.	Select “Actions”-->“Start Operation Flow”.
+<br>![](/exercises/ex3/images/004.png)
 	Now you will probably see many operation flows with similar names. Search for the operation flow name with your number to ensure you select the right one. Select “Start” to trigger it.
 7.	Select “Operation Flows”. Verify that the operation flow you started is displayed and has status completed .
 8.	Select the Instance id to jump into the operation flow execution in SAP Automation Pilot and review the execution details
 10.	Navigate to Health Monitoring and verify that disk utilization has decreased.
 11.	Navigate  to the alert and select Actions --> Confirm Alert .
+<br>![](/exercises/ex3/images/005.png)
 ## Exercise 3.3 Configure the automatic triggering of the operation flow
 12.	Logon to SAP Cloud ALM
 13.	Select Health Monitoring.
