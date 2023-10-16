@@ -12,9 +12,9 @@ You will setup and use SAP Cloud ALM Health Monitoring for a customer developed 
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
-•	Very basic knowledge in BTP Cockpit
-•	Please use the Chrome browser on your Teched laptop
+The requirements to follow the exercises in this repository are: 
+* Very basic knowledge in BTP Cockpit
+* Please use the Chrome browser on your Teched laptop
 
 ## Exercises
 
