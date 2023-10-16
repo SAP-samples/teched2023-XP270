@@ -19,6 +19,10 @@ We use SAP Cloud ALM – Health Monitoring for monitoring of a custom developed 
 ### Automated scenario​
 As an alert about high app disk storage comes up in SAP Cloud ALM, a command in SAP Automation Pilot is triggered automatically that clears the temp storage and / or restarts the app (if needed). The output of the command is then automatically sent via a notification.​
 
+> [!Note]
+> You will get to know better SAP Automation Pilot so feel free to check out this product capabilities overview as well.
+
+![](./autopi-functional-overview.png)
 
 ## Requirements
 
