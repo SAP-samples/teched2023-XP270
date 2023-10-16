@@ -30,7 +30,7 @@ Cloud service “XP270-XXX” of type “SAP BTP, Cloud Foundry” is the repres
 10.	Select Edit
 <br>![](/exercises/ex1/images/007.png)
 11.	Navigate forward
-<br>![](/exercises/ex1/images/008.png)
+<br>![](/exercises/ex1/images/06b.png)
 The Metrics section shows available metrics for custom applications deployed in a SAP BTP Cloud Foundry space. By default all metrics have no threshold.
 12.	Select metric type “CPU Utilization”
 <br>![](/exercises/ex1/images/009.png)
