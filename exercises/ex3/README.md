@@ -2,7 +2,7 @@
 
 In this exercise you will check the alert information and trigger the previously defined operation flow manually from the alert. Afterwards you will check that this has resolved the problem. Afterwards you will configure that the operation flow is triggered automatically the next time.
 ## Exercise 3.1 Optional : Check e mail notification 
-1.	If you configured e mail notification in step 1:
+1.	If you configured e mail notification in exercise 1:
 Open your e mail inbox. You should have received a mail “Welcome to SAP Cloud ALM” . Open the mail. It should look similar to below.
 <br>![](/exercises/ex3/images/001.png)
 
