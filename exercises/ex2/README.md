@@ -8,7 +8,7 @@ During this exercise you will create a command to clean the disk space using SAP
 
 > [!Note]
 > You will get to know better SAP Automation Pilot so feel free to check out this product capabilities overview as well.
-![](./images/autopi-functional-overview.png) 
+![](./autopi-functional-overview.png) 
 
 ## Exercise 2.1 - Define commmands for an automated remediations via SAP Automation Plot   
 
