@@ -105,7 +105,7 @@ The previously defined command needs to be registered in SAP Cloud ALM so that S
 
 5. Select Endpoint AP_XXX (replace XXX with your number )
 
-6. Select the command you created earlier in ID.
+6. Select the command you created earlier (XP270.XXX.deleteAppTemStorageDemo.)
 
 7. Leave input reference empty.
 
