@@ -10,7 +10,7 @@ Get a detailed overview of the health monitoring capabilities in SAP Cloud ALM. 
 
 You will setup and use SAP Cloud ALM Health Monitoring for a customer developed application deployed  in a SAP BTP Cloud Foundry subaccount. Eventually SAP Cloud ALM will trigger an alert that something is not in order with the application. You will define an automation pilot command for automated event remediation and trigger it from the alert in SAP Cloud ALM. Afterwards you will check in monitoring that the command has solved the problem.
 
-## Solution Digram explained
+## Solution Diagram explained
 ![](./solution-diagram.png)
 
 ### Main concept
