@@ -18,36 +18,39 @@ Please replace the XXX in the user name with your assigned number (e.g. XP270-00
 <br>![](/exercises/ex1/images/003.png)
 5.	Select the scope selector. 
 <br>![](/exercises/ex1/images/004.png)
-6.	Search for cloud service XP270-XXX (replace XXX with your number example: XP270-001) . Select the cloud service. Select Apply.
+6. Select Toggle Filter Bar.
+7. Select Servcie Status All. Select Go.
+<br>![](/exercises/ex1/images/01a.png)
+8.	Search for cloud service XP270-XXX (replace XXX with your number example: XP270-001) . Select the cloud service. Select Apply.
 <br>![](/exercises/ex1/images/005.png) 
 Explanation: 
 Cloud service “XP270-XXX” of type “SAP BTP, Cloud Foundry” is the representation of the SAP BTP subaccount XP270-XXX in SAP Cloud ALM. The steps above restrict the view in health monitoring to the subaccount assigned to you.
-7.	Select Configuration.
-8.	Turn on data collection for cloud service “XP270-XXX”.
+9.	Select Configuration.
+10.	Turn on data collection for cloud service “XP270-XXX”.
 <br>![](/exercises/ex1/images/006.png)
-9.	Click on the service name to see the details of the configuration.
+11.	Click on the service name to see the details of the configuration.
 <br>![](/exercises/ex1/images/06a.png)
-10.	Select Edit
+12.	Select Edit
 <br>![](/exercises/ex1/images/007.png)
-11.	Navigate forward
+13.	Navigate forward
 <br>![](/exercises/ex1/images/06b.png)
 The Metrics section shows available metrics for custom applications deployed in a SAP BTP Cloud Foundry space. By default all metrics have no threshold.
-12.	Select metric type “CPU Utilization”
+14.	Select metric type “CPU Utilization”
 <br>![](/exercises/ex1/images/008.png)
-13.	Read through the description to familiarize. 
-14.	Select threshold type “Numeric”.
-15.	Select Condition “Above”
-16.	Select threshold 70% for warning and 90% for critical. Select save.
+15.	Read through the description to familiarize. 
+16.	Select threshold type “Numeric”.
+17.	Select Condition “Above”
+18.	Select threshold 70% for warning and 90% for critical. Select save.
 <br>![](/exercises/ex1/images/009.png)
-17.	Select metric type “Disk Utilization”
+19.	Select metric type “Disk Utilization”
 <br>![](/exercises/ex1/images/010.png)
-18.	Read through the description to familiarize. 
-19.	Select threshold type “Numeric”.
-20.	Select Field “Usage”.
-21.	Select Condition “Above”.
-22.	Select threshold 70% for warning and 90% for critical. Select save.
+20.	Read through the description to familiarize. 
+21.	Select threshold type “Numeric”.
+22.	Select Field “Usage”.
+23.	Select Condition “Above”.
+24.	Select threshold 70% for warning and 90% for critical. Select save.
 <br>![](/exercises/ex1/images/011.png)
-23.	Optional: Define thresholds for other metrics.
+25.	Optional: Define thresholds for other metrics.
 
 ## Exercise 1.3 Configure Alerting
 24.	Select Events tab.
