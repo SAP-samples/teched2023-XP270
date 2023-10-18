@@ -19,7 +19,7 @@ Please replace the XXX in the user name with your assigned number (e.g. XP270-00
 5.	Select the scope selector. 
 <br>![](/exercises/ex1/images/004.png)
 6. Select Toggle Filter Bar.
-7. Select Servcie Status All. Select Go.
+7. Select Service Status All. Select Go.
 <br>![](/exercises/ex1/images/01a.png)
 8.	Search for cloud service XP270-XXX (replace XXX with your number example: XP270-001) . Select the cloud service. Select Apply.
 <br>![](/exercises/ex1/images/005.png) 
