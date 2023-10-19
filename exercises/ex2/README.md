@@ -23,7 +23,7 @@ During this exercise you will create a command to clean the disk space using SAP
 ![](./images/05-03-automation-pilot.png)
 
 > [!NOTE]
-> Do not modify the inpouts for the Technical user. Password for the BTP Technical user is not visible for you as it was added in advance as a senstive string. 
+> Do not modify the inputs for the Technical user. Password for the BTP Technical user is not visible for you as it was added in advance as a senstive string. 
 
 5.	Now you are good to go and navigate back to the command you have created so that you can add all the needed input keys so that the command can be triggered and executed successfully.
 ![](./images/input-keys-1.png)
