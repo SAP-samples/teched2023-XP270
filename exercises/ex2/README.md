@@ -91,7 +91,7 @@ Now you are ready to trigger the command manually or automatically via SAP Cloud
 
 ## Exercise 2.2 - Register command as Operation Flow in SAP Cloud ALM  
 
-The previously defined command needs to be registered in SAP Cloud ALM so that SAP Cloud ALM can trigger it. 
+The previously defined command "Delete App Temp Storage"needs to be registered in SAP Cloud ALM so that SAP Cloud ALM can trigger it. 
 
 1. Logon to SAP Cloud ALM.
 
@@ -103,7 +103,7 @@ The previously defined command needs to be registered in SAP Cloud ALM so that S
 4. Select “SAP Automation Pilot”.
 ![](./images/2.2-pic-02.png)
 
-5. Select Endpoint AP_XXX (replace XXX with your number )
+5. Select Endpoint XP270_XXX (replace XXX with your number )
 
 6. Select the command you created earlier (XP270.XXX.deleteAppTemStorageDemo.)
 
