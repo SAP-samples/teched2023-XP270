@@ -9,7 +9,7 @@ A custom-developed Java application “perfumeStore” was deployed in SAP BTP i
 Please replace the XXX in the user name with your assigned number (e.g. XP270-001@education.cloud.sap).
 | Application | User ID | Password | URL |
 |---|---|---|---|
-| SAP BTP Cockpit | XP270-**XXX**@education.cloud.sap | coming soon | https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/accountModel&//?section=SubaccountsSection&view=TreeTableView |
+| SAP BTP Cockpit | XP270-**XXX**@education.cloud.sap | Acce$$teched23 | https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/accountModel&//?section=SubaccountsSection&view=TreeTableView |
 
 ## Connect to SAP BTP CF subaccount and start your app
 
