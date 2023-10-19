@@ -5,7 +5,7 @@ In this exercise you will configure and use health monitoring for the perfumesto
 ## Exercise 1.1 Login to SAP Cloud ALM
 | Application | User ID | Password | URL |
 |---|---|---|---|
-| SAP Cloud ALM URL | XP270-**XXX**@education.cloud.sap | coming soon | [SAP Cloud ALM](https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad) |
+| SAP Cloud ALM URL | XP270-**XXX**@education.cloud.sap | Acce$$teched23 | [SAP Cloud ALM](https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad) |
 
 Please replace the XXX in the user name with your assigned number (e.g. XP270-001@education.cloud.sap).
 1. Select the SAP  Cloud ALM URL
