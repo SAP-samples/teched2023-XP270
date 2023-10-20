@@ -27,7 +27,7 @@ Explanation:
 Cloud service “XP270-XXX” of type “SAP BTP, Cloud Foundry” is the representation of the SAP BTP subaccount XP270-XXX in SAP Cloud ALM. The steps above restrict the view in health monitoring to the subaccount assigned to you.
 9.	Select Configuration.
 10.	Check that data collection is already switched on. (Please do not change anything here).
-<br>![](/exercises/ex1/images/006.png)
+<br>![](/exercises/ex1/images/06a.png)
 11.	Click on the service name to see the details of the configuration.
 <br>![](/exercises/ex1/images/06a.png)
 12.	Select Edit
