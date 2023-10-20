@@ -29,7 +29,7 @@ Cloud service “XP270-XXX” of type “SAP BTP, Cloud Foundry” is the repres
 10.	Check that data collection is already switched on. (Please do not change anything here).
 <br>![](/exercises/ex1/images/06a.png)
 11.	Click on the service name to see the details of the configuration.
-<br>![](/exercises/ex1/images/06a.png)
+<br>![](/exercises/ex1/images/06c.png)
 12.	Select Edit
 <br>![](/exercises/ex1/images/007.png)
 13.	Navigate forward
