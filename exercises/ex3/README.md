@@ -36,24 +36,25 @@ Review the alert details and possible actions.
 11.	Navigate  to the alert and select Actions --> Confirm Alert .
 <br>![](/exercises/ex3/images/005.png)
 ## Exercise 3.3 Configure the automatic triggering of the operation flow
-You don't want to trigger the operation flow manually whenever the alert occurs so you configure the automated triggering of oepration flows from the corresponding monitoring event "High Disk Utilization".
-12.	Logon to SAP Cloud ALM.
-13.	Select Health Monitoring.
-14.	Select Configuration.
-15.	Select Edit.
-16.	Select Service Name “XP270-XXX”. Please replace the **XXX** with your assigned number.
-17.	Select metric type “Disk utilization” and reduce the yellow threshold to 40% to ensure that the threshold is breached earlier.
+You don't want to trigger the operation flow manually whenever the alert occurs so you configure the automated triggering of operation flows from the corresponding monitoring event "High Disk Utilization".
+
+12.	Logon to SAP Cloud ALM.	
+14.	Select Health Monitoring.	
+16.	Select Configuration.	
+18.	Select Edit.	
+20.	Select Service Name “XP270-XXX”. Please replace the **XXX** with your assigned number.
+21.	Select metric type “Disk utilization” and reduce the yellow threshold to 40% to ensure that the threshold is breached earlier.
 <br>![](/exercises/ex3/images/010.png)
-18.	Select events.
-19.	Select event type “High Disk Utilization”.
-20.	Switch on “Start Operation Flow”.
-21.	Select “Add Operation Flow”.
-22.	22.	Now you will probably see many operation flows with similar names. Search for the operation flow with your number and select it.
+23.	Select events.
+24.	Select event type “High Disk Utilization”.
+25.	Switch on “Start Operation Flow”.
+26.	Select “Add Operation Flow”.
+27.	22.	Now you will probably see many operation flows with similar names. Search for the operation flow with your number and select it.
 <br>![](/exercises/ex3/images/011.png)
-23.	Close the configuration UI.
-24.	Wait until the alert appears again. (Eventually you could also restart the application).
-25.	Select the new “High Disk Utilization” alert to open alert details.
-26.	Select Operation Flows . Check that the Operation Flow has been triggered automatically this time. 
+28.	Close the configuration UI.
+29.	Wait until the alert appears again. (Eventually you could also restart the application).
+30.	Select the new “High Disk Utilization” alert to open alert details.
+31.	Select Operation Flows . Check that the Operation Flow has been triggered automatically this time. 
 <br>![](/exercises/ex3/images/006.png)
 ## Exercise 3.4 Check IEP event log and event actions (optional).
 As the operation flow resolves the critical situation automatically you could also deactivate the alert in the configuration.
