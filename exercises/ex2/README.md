@@ -1,4 +1,4 @@
-# Exercise 2 - Exercise 2 Description
+# Exercise 2 - Description
 
 You inform the developer of the `perfumeStore` app of the disk utilization problem. He advises to set couple of possible remediation actions and build automated flows for these such as: 
 - clear the diskspace as soon as it has exceeded a certain limit;
@@ -28,8 +28,9 @@ What you need to specify within the commands input keys are just two inputs:
 ![](./images/2.1.2-pic-05.png)
 
 > [!NOTE]
-> endpoint is {app_url}/delete-file
-> app_url can be found via SAP BTP Cockpit as explained here: "BTP Cockpit" --> "Spaces" --> click on the desired space (in your use case you should be able to see just one space, so click on the spacenamed "prod") --> clik on the app name (e.g. `perfumeStore`) and you shall see the Applicaiton Overview scree. Check out the "Application Routers" URL - this is your App URL that shall be copied and used. 
+> endpoint is `{app_url}/delete-file`
+
+**HINT:** `{app_url}` can be found via SAP BTP Cockpit as explained here: "BTP Cockpit" --> "Spaces" --> click on the desired space (in your use case you should be able to see just one space, so click on the spacenamed "prod") --> clik on the app name (e.g. `perfumeStore`) and you shall see the Applicaiton Overview scree. Check out the "Application Routers" URL - this is your App URL that shall be copied and used. 
 ![](./images/2.1.2-pic-04.png)
 
 **IMPORTANT**: How to work with input keys - see further details as per the screenshots below. 
@@ -110,7 +111,8 @@ Once you are done with adding the correct values for your input keys you can pro
 10.	Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after rinning the command. Please follow the guidance shared below: 
 ![](./images/06-automation-pilot.png)
 
-12.	Command output keys will be printed here
+12.	Command output keys will be printed here:
+![](./images/2.1.2-pic-10.png)
 
 Now you are ready to trigger the command manually or automatically via SAP Cloud ALM. 
 
