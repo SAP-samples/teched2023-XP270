@@ -11,7 +11,7 @@ In this exercise you will review the alert details and trigger the operation flo
 Logon Data
 | Application | User ID | Password | URL |
 |---|---|---|---|
-| SAP Cloud ALM URL | XP270-**XXX**@education.cloud.sap | coming soon | [SAP Cloud ALM](https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad) |
+| SAP Cloud ALM URL | XP270-**XXX**@education.cloud.sap | Acce$$teched23 | [SAP Cloud ALM](https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad) |
 
 Please replace the **XXX** in the user name with your assigned number.
 
