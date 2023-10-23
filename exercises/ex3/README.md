@@ -37,10 +37,10 @@ Review the alert details and possible actions.
 <br>![](/exercises/ex3/images/005.png)
 ## Exercise 3.3 Configure the automatic triggering of the operation flow
 You don't want to trigger the operation flow manually whenever the alert occurs so you configure the automated triggering of operation flows from the corresponding monitoring event "High Disk Utilization".
-12.	Logon to SAP Cloud ALM.	
-14.	Select Health Monitoring.	
-16.	Select Configuration.	
-18.	Select Edit.	
+12.	Logon to SAP Cloud ALM.
+14.	Select Health Monitoring.
+16.	Select Configuration.
+18.	Select Edit
 20.	Select Service Name “XP270-XXX”. Please replace the **XXX** with your assigned number.
 21.	Select metric type “Disk utilization” and reduce the yellow threshold to 40% to ensure that the threshold is breached earlier.
 <br>![](/exercises/ex3/images/010.png)
