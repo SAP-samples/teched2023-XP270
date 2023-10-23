@@ -49,7 +49,7 @@ Once you are done with adding the correct values for your input keys you can pro
 9.	Map the input keys to the execution you have created in the previous step:
 ![](./images/2.1.2-pic-08.png)
 
-10.	Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after rinning the command. Please follow the guidance shared below: 
+10.	Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after running the command. Please follow the guidance shared below: 
 ![](./images/2.1.2-pic-09.png)
 
 12.	Command output keys will be printed here
