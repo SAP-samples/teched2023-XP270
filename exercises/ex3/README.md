@@ -13,7 +13,7 @@ Logon Data
 |---|---|---|---|
 | SAP Cloud ALM URL | XP270-**XXX**@education.cloud.sap | coming soon | [SAP Cloud ALM](https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad) |
 
-Please replace the **XXX** in the user name with your assigned number, 
+Please replace the **XXX** in the user name with your assigned number.
 
 2.	Logon to SAP Cloud ALM.
 3.	Select “Health Monitoring”.
