@@ -79,6 +79,18 @@ Important: This command is an optional one. It can be triggered manually via CAL
 ![](./images/input-keys-1.png)
 ![](./images/input-keys-2.png)
 
+**NOTE: **
+- for identiryProvider you need to add `sap.ids` which is the  IDS for the technical user already set for you.
+- to add the needed inputs for your BTP Technical user you need to follow these steps for both "user" and "password" (as the steps are identical):
+![](./images/inputKeys_2.1.png)
+![](./images/inputKeys_2.2.png)
+![](./images/inputKeys_2.3.png)
+![](./images/inputKeys_2.4.png)
+
+- to find out the Space ID and App ID you can use this hint:
+![](./images/inputKeys_2.5.png)
+
+
 
 ![](.images/autopi-functional-overview.png)
 
