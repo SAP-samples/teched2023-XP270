@@ -26,78 +26,71 @@ Please replace the XXX in the user name with your assigned number (e.g. XP270-00
 Explanation: 
 Cloud service “XP270-XXX” of type “SAP BTP, Cloud Foundry” is the representation of the SAP BTP subaccount XP270-XXX in SAP Cloud ALM. The steps above restrict the view in health monitoring to the subaccount assigned to you.
 9.	Select Configuration.
-10.	Check that data collection is already switched on. (Please do not change anything here).
+<br>![](/exercises/ex1/images/04c.png) 	
+11.	Check that data collection is already switched on. (Please do not change anything here).
 <br>![](/exercises/ex1/images/06a.png)
-11.	Click on the service name to see the details of the configuration.
+12.	Click on the service name to see the details of the configuration.
 <br>![](/exercises/ex1/images/06c.png)
-12.	Select Edit
-<br>![](/exercises/ex1/images/007.png)
-13.	Navigate forward
-<br>![](/exercises/ex1/images/06b.png)
-The Metrics section shows available metrics for custom applications deployed in a SAP BTP Cloud Foundry space. By default all metrics have no threshold.
-14.	Select metric type “CPU Utilization”
-<br>![](/exercises/ex1/images/008.png)
-15.	Read through the description to familiarize. 
-16.	Select threshold type “Numeric”.
-17.	Select Condition “Above”
-18.	Select threshold 70% for warning and 90% for critical. Select save.
-<br>![](/exercises/ex1/images/009.png)
-19.	Select metric type “Disk Utilization”
+13.	The Metrics section shows available metrics for custom applications deployed in a SAP BTP Cloud Foundry space. By default all metrics have no threshold.
+Select metric type “Disk Utilization”
 <br>![](/exercises/ex1/images/010.png)
-20.	Read through the description to familiarize. 
-21.	Select threshold type “Numeric”.
-22.	Select Field “Usage”.
-23.	Select Condition “Above”.
-24.	Select threshold 70% for warning and 90% for critical. Select save.
+14.	Read through the description to familiarize. 
+15.	Select threshold type “Numeric”.
+16.	Select Field “Usage”.
+17.	Select Condition “Above”.
+18.	Select threshold 70% for warning and 90% for critical. Select save.
 <br>![](/exercises/ex1/images/011.png)
-25.	Optional: Define thresholds for other metrics.
+19.	Optional: Define thresholds for other metrics.
 
 ## Exercise 1.3 Configure Alerting
-24.	Select Events tab.
-25.	Select the event type “High Disk Utilization”. 
+20.	Select Events tab.
+21.	Select the event type “High Disk Utilization”. 
 <br>![](/exercises/ex1/images/012.png)
-26.	Switch on event action “Create Alert”. Select Save. 
+22.	Switch on event action “Create Alert”. Select Save. 
 <br>![](/exercises/ex1/images/013.png)
-27.	Select Close on the ‘Configuration for Services’.
+23.	Select Close on the ‘Configuration for Services’.
 
 ## Exercise 1.3 Configure email notification (optional)
 You can also configure email notifications. This requires that you enter yourself as recipient in notification management. As you are working in a shared SAP Cloud ALM, other participants will be able to see your e mail address. If you are not ok with this you can skip this part of the exercise.
-28.	Select Notification Management from the SAP Cloud ALM Launchpad.
+
+24.	Select Notification Management from the SAP Cloud ALM Launchpad.
 <br>![](/exercises/ex1/images/014.png)
-29.	Select Add.
-30.	Enter your email address ( which you can access during the course of this exercise)and select save.
+25.	Select Add.
+26.	Enter your email address ( which you can access during the course of this exercise)and select save.
 <br>![](/exercises/ex1/images/015.png)
  Your e mail address will appear in Notification management with status “Pending”.
-31.	Open your e mail inbox. You should have received a mail “Welcome to SAP Cloud ALM”. Open the mail.
-32.	Select the link in the mail to consent that you want to receive notifications from SAP Cloud ALM. After clicking on the link, a web page opens showing “You are subscribed to SAP Cloud ALM Notifications”. 
-33.	 Close and re-open the Notification Management browser window. Your e mail address should change to  status “Verified”.
+27.	Open your e mail inbox. You should have received a mail “Welcome to SAP Cloud ALM”. Open the mail.
+28.	Select the link in the mail to consent that you want to receive notifications from SAP Cloud ALM. After clicking on the link, a web page opens showing “You are subscribed to SAP Cloud ALM Notifications”. 
+29.	 Close and re-open the Notification Management browser window. Your e mail address should change to  status “Verified”.
 <br>![](/exercises/ex1/images/016.png)
- 34.	Navigate to Health Monitoring app and go to Event Configuration screen for service XP270-XXX.
-35.	Switch on event action “Send Email To”.
-36.	Select Add button. Select your email address. Select Save.
+30.	Navigate to Health Monitoring app and go to Event Configuration screen for service XP270-XXX.
+<br>![](/exercises/ex1/images/016d.png)
+<br>![](/exercises/ex1/images/016e.png)
+31.	Switch on event action “Send Email To”.
+32.	Select Add button. Select your email address. Select Save.
 <br>![](/exercises/ex1/images/017.png)
-37.	Select Close on the ‘Configuration for Services’.
-38.	Close the configuration pane if it is still open.
+33.	Select Close on the ‘Configuration for Services’.
+34.	Close the configuration pane if it is still open.
 
 ## Exercise 1.4 Use health monitoring to check the health of your custom application
 
-38.	Close the configuration pane if it is still open.
+35.	Close the configuration pane if it is still open.
  <br>![](/exercises/ex1/images/018.png)
-39.	Select Monitoring.
-40.	Select service “XP270-XXX”.
+36.	Select Monitoring.
+37.	Select service “XP270-XXX”.
 Click on the row to check the metric overview.  
 <br>![](/exercises/ex1/images/019.png)
 Depending on how much time passed since perfumestore app start, the metric Disk
  utilization might already have a yellow or red rating. 
 <br>![](/exercises/ex1/images/020.png)
-41.	Select metric “Disk Utilization”
-42.	Click on “History”.
+38.	Select metric “Disk Utilization”
+39.	Click on “History”.
 <br>![](/exercises/ex1/images/021.png)
- 43.	Select “Time Frame” and then choose ‘Last 1 hour’ and Resolution as ‘1 minute.’ Select Apply.
+40.	Select “Time Frame” and then choose ‘Last 1 hour’ and Resolution as ‘1 minute.’ Select Apply.
 <br>![](/exercises/ex1/images/022.png)
  You will notice that the Disk utilization of the perfumestore app increases continuously towards the limit of 1 GB. 
 <br>![](/exercises/ex1/images/023.png)
-44.	Optionally: Check other metrics
+41.	Optionally: Check other metrics
 ## Summary
 
 You've now configured monitoring of your custom app and detected the first problem that it consumes excessively disk space . As a next step you will configure an automated action to resolve this problem in [Exercise 2 - Build Clean Disk Command](../ex2/README.md)
