@@ -153,4 +153,4 @@ The previously defined command "Delete App Temp Storage"needs to be registered i
 
 You've now all commands for automated remediations modeled and stored in SAP Automation Pilot and also have integrated your SAP Cloud ALM to SAP Automation Pilot. Now the commands in questions can be triggered automatically or manually via Cloud ALM. 
 
-Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
+Continue to - [Exercise 3 - Check alert and resolve problem ](../ex3/README.md)
