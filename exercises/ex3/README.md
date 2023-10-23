@@ -43,7 +43,7 @@ You don't want to trigger the operation flow manually whenever the alert occurs 
 13.	Select Health Monitoring.
 
 14.	Select Configuration.
-15.	Select Edit
+15.	Select Edit.
 16.	Select Service Name “XP270-XXX”. Please replace the **XXX** with your assigned number.
 17.	Select metric type “Disk utilization” and reduce the yellow threshold to 40% to ensure that the threshold is breached earlier.
 <br>![](/exercises/ex3/images/010.png)
