@@ -37,7 +37,6 @@ Review the alert details and possible actions.
 <br>![](/exercises/ex3/images/005.png)
 ## Exercise 3.3 Configure the automatic triggering of the operation flow
 You don't want to trigger the operation flow manually whenever the alert occurs so you configure the automated triggering of operation flows from the corresponding monitoring event "High Disk Utilization".
-
 12.	Logon to SAP Cloud ALM.	
 14.	Select Health Monitoring.	
 16.	Select Configuration.	
