@@ -134,7 +134,7 @@ The previously defined command "Delete App Temp Storage"needs to be registered i
 
 5. Select Endpoint XP270_XXX (replace XXX with your number )
 
-6. Select the command you created earlier (XP270.XXX.deleteAppTemStorageDemo.)
+6. Select the F4 help in the ID field. Select the command you created earlier (XP270.XXX.deleteAppTemStorageDemo.)
 
 7. Leave input reference empty.
 
