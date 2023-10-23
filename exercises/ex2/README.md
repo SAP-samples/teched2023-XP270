@@ -127,27 +127,23 @@ The previously defined command "Delete App Temp Storage"needs to be registered i
 2. Select “Operations Automation”.
 ![](./images/2.2-pic-01.png)
 
-3. Select “Register Operation Flow”.
-
-4. Select “SAP Automation Pilot”.
+3. Select “Register Operation Flow”. Select “SAP Automation Pilot”.
 ![](./images/2.2-pic-02.png)
 
-5. Select Endpoint XP270_XXX (replace XXX with your number )
+4. Select Endpoint XP270_XXX (replace XXX with your number )
 
-6. Select the F4 help in the ID field. Select the command you created earlier (XP270.XXX.deleteAppTemStorageDemo.)
+5. Select the F4 help in the ID field. Select the command you created earlier (XP270.XXX.deleteAppTemStorageDemo.)
 
-7. Leave input reference empty.
+6. Leave input reference empty.
 
-8. Optionally enter a description.
+7. Optionally enter a description.
 
-9. Select Use Case “Health Monitoring”.
+8. Select Use Case “Health Monitoring”.
 
-10. Select Ok.
+9. Select Ok.
 ![](./images/2.2-pic-03.png)
 
-11. Now the command should appear in the list of operation flows. 
-
-
+10. Now the command should appear in the list of operation flows. 
 
 ## Summary
 
