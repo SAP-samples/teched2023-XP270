@@ -53,7 +53,7 @@ You don't want to trigger the operation flow manually whenever the alert occurs 
 21.	Select “Add Operation Flow”.
 22.	22.	Now you will probably see many operation flows with similar names. Search for the operation flow with your number and select it.
 <br>![](/exercises/ex3/images/011.png)
-23.	Close the configuration UI.
+23.     Close the configuration UI.
 24.	Wait until the alert appears again. (Eventually you could also restart the application).
 25.	Select the new “High Disk Utilization” alert to open alert details.
 26.	Select Operation Flows . Check that the Operation Flow has been triggered automatically this time. 
