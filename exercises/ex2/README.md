@@ -141,7 +141,7 @@ The previously defined command "Delete App Temp Storage"needs to be registered i
 8. Select Use Case “Health Monitoring”.
 
 9. Select Ok.
-![](./images/2.2-pic03)
+![](./images/2.2-pic03.png)
 
 10. Now the command should appear in the list of operation flows. 
 
