@@ -130,7 +130,7 @@ The previously defined command "Delete App Temp Storage"needs to be registered i
 3. Select “Register Operation Flow”. Select “SAP Automation Pilot”.
 ![](./images/2.2-pic-02.png)
 
-4. Select Endpoint XP270_XXX (replace XXX with your number )
+4. Type  XP270_XXX (replace XXX with your number ) in field endpoint.
 
 5. Select the F4 help in the ID field. Select the command you created earlier (XP270.XXX.deleteAppTemStorageDemo.)
 
@@ -141,7 +141,7 @@ The previously defined command "Delete App Temp Storage"needs to be registered i
 8. Select Use Case “Health Monitoring”.
 
 9. Select Ok.
-![](./images/2.2-pic-03.png)
+![](./images/2.2-pic03)
 
 10. Now the command should appear in the list of operation flows. 
 
