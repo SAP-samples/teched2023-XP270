@@ -8,11 +8,11 @@
 ![](./images/02-automation-pilot.png)
    
 3.	Access the command and clone by adding it to the respective catalog as shown on the screenshot and name it “{your session ID}.(user ID).RestartCfAppDemo”, e.g. "XP270.001.RestartCfAppDemo" ,  "XP270.002.RestartCfAppDemo", etc.
-![](./images/03-automation-pilot.png)
-![](./images/04-automation-pilot.png)
+![](/exercises/ex2/images/03-automation-pilot.png)
+![](/exercises/ex2/images/04-automation-pilot.png)
   	
 4.	Explore the setup of your BTP Technical User that is already made for you in SAP Automation Pilot. To do so - click on the “Inputs” section within the leftsidebar, then look for the inputs named `btpTechnicalUser` 
-![](./images/05-03-automation-pilot.png)
+![](/exercises/ex2/images/05-03-automation-pilot.png)
 
 > [!NOTE]
 > Do not modify the inputs for the Technical user. Password for the BTP Technical user is not visible for you as it was added in advance as a senstive string. 
