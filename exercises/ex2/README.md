@@ -44,16 +44,17 @@ What you need to specify within the commands input keys are just two inputs:
 **HINT:** `{app_url}` can be found via SAP BTP Cockpit as explained here: "BTP Cockpit" --> "Spaces" --> click on the desired space (in your use case you should be able to see just one space, so click on the spacenamed "prod") --> clik on the app name (e.g. `perfumeStore`) and you shall see the Applicaiton Overview scree. Check out the "Application Routers" URL - this is your App URL that shall be copied and used. 
 ![](./images/2.1.2-pic-04.png)
 
+Once you are done with adding the correct values for your input keys you can proceed further to model the command and specify which exact action to be triggered by the command.
 
-7.	Add the needed execution as shown below
+7.	Add the needed executors to the command.
+To specify the exact action for the command, you need to add a comand executor.
 
+To do so , navigate down to the command section named "Executors" and click on the "Add" button (see the screenshot below): 
 ![](./images/04-03-automation-pilot.png)
 ![](./images/2.1.2-pic-07.png)
 
-Once you are done with adding the correct values for your input keys you can proceed further to model the command and specify which exact action to be triggered by the command.
 
-To specify the exact action for the command, you need to add a comand executor.
-7.1. To do so , navigate down to the command section named "Executors" and click on the "Add" button (see the screenshot below): 
+7.1
 ![](./images/04-02-automation-pilot.png)
 
 7.2. Now Click on the button `Here` as per the screenshot below and add the alias `restartApp` (it can be whaever alias which makes sense to you) and from the dropdown "Command" use the autocomplete form and search for this specific command out of the provided commands' catalog: `http-sapcp:HttpRequest:1`
