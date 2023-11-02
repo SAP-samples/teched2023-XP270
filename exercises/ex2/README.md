@@ -6,7 +6,7 @@ You inform the developer of the `perfumeStore` app of the disk utilization probl
 
 During this exercise you will create a command to clean the disk space using SAP Automation Pilot and register the command as operation flow in SAP Cloud ALM. 
 
-## Exercise 2 - Define commmands for an automated remediations via SAP Automation Plot   
+## Exercise 2.1. - Define commmands for an automated remediations via SAP Automation Plot   
 
 ### Command: "Delete App Temp Storage" in SAP Automation Pilot 
 
@@ -48,20 +48,15 @@ Once you are done with adding the correct values for your input keys you can pro
 
 7.	Add the needed executors to the command.
 To specify the exact action for the command, you need to add a comand executor.
+7.1. To do so , navigate down to the command section named "Executors" and click on the "Add" button (see the screenshot below):
+![](./images/04-02-automation-pilot.png)
 
-To do so , navigate down to the command section named "Executors" and click on the "Add" button (see the screenshot below): 
+
+7.2.  Now Click on the button `Here` as per the screenshot below and add the alias `restartApp` (it can be whaever alias which makes sense to you) and from the dropdown "Command" use the autocomplete form and search for this specific command out of the provided commands' catalog: `http-sapcp:HttpRequest:1`
 ![](./images/04-03-automation-pilot.png)
 ![](./images/2.1.2-pic-07.png)
 
-
-7.1
-![](./images/04-02-automation-pilot.png)
-
-7.2. Now Click on the button `Here` as per the screenshot below and add the alias `restartApp` (it can be whaever alias which makes sense to you) and from the dropdown "Command" use the autocomplete form and search for this specific command out of the provided commands' catalog: `http-sapcp:HttpRequest:1`
-![](./images/inputKeys_2.6.png)
-![](./images/inputKeys_2.7.png)
-
-NOTE: Keep the "Automap parameters" toggle enabled so that your inputs can be mapped to the command automatically. Click on the button `Add` to save your changes.
+**NOTE**: Keep the "Automap parameters" toggle enabled so that your inputs can be mapped to the command automatically. Click on the button `Add` to save your changes.
 
 9.	Now your command should be ready and you can see the following paramters being mapped to the command executors:
 ![](./images/2.1.2-pic-08.png)
