@@ -4,14 +4,19 @@
 
 1. Access your SAP Automation Pilot via SAP BTP cockpit  .
 ![](/exercises/ex2/images/01-accessing-automation-pilot.png)
-2.	Once you access the SAP Automation Pilot navigate to `Comands` section and look for a command named `RestartCfApp`
+2.	Once you access the SAP Automation Pilot navigate to `Comands` section and search for a  command named `RestartCfApp`
 ![](./images/02-automation-pilot.png)
+![](./images/04-automation-pilot.png)
+
+![](/exercises/ex4/images/autopi_search_command.png)
+![](/exercises/ex4/images/autopi_search_command_2.png)
+![](/exercises/ex4/images/autopi_search_command_3.png)
    
-3.	Access the command and clone it by adding it to the respective catalog `Welcome` as shown on the screenshot and name it as per this guidance `{your session ID}.(user ID).RestartCfAppDemo`, e.g. `XP270.001.RestartCfAppDemo" ,  "XP270.002.RestartCfAppDemo`, etc.
+4.	Access the command and clone it by adding it to the respective catalog `Welcome` as shown on the screenshot and name it as per this guidance `{your session ID}.(user ID).RestartCfAppDemo`, e.g. `XP270.001.RestartCfAppDemo" ,  "XP270.002.RestartCfAppDemo`, etc.
 ![](/exercises/ex2/images/03-automation-pilot.png)
 ![](/exercises/ex2/images/04-automation-pilot.png)
   	
-4.	Explore the setup of your BTP Technical User that is already made for you in SAP Automation Pilot. To do so - click on the “Inputs” section within the leftsidebar, then look for the inputs named `btpTechnicalUser` 
+5.	Explore the setup of your BTP Technical User that is already made for you in SAP Automation Pilot. To do so - click on the “Inputs” section within the leftsidebar, then look for the inputs named `btpTechnicalUser` 
 ![](/exercises/ex2/images/05-03-automation-pilot.png)
 
 > [!NOTE]
