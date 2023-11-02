@@ -6,23 +6,34 @@ You inform the developer of the `perfumeStore` app of the disk utilization probl
 
 During this exercise you will create a command to clean the disk space using SAP Automation Pilot and register the command as operation flow in SAP Cloud ALM. 
 
-## Exercise 2.1 - Define commmands for an automated remediations via SAP Automation Plot   
+## Exercise 2 - Define commmands for an automated remediations via SAP Automation Plot   
 
-### 2.1.1 - Command: "Delete App Temp Storage" in SAP Automation Pilot 
+### Command: "Delete App Temp Storage" in SAP Automation Pilot 
 
 1. Access your SAP Automation Pilot via SAP BTP cockpit  .
 ![](./images/01-accessing-automation-pilot.png)
 
-2.	Once you access the SAP Automation Pilot navigate to “Comands” section and look for a command named `HttpRequest`
+2.	Once you access the SAP Automation Pilot navigate to “Comands” section search for a command named `HttpRequest`
+![](./images/command_search.png)
 ![](./images/2.1.2-pic-01.png)
+
    
 3.	Access the command and clone by adding it to the respective catalog as shown on the screenshot and name it “{your session ID}.(user ID).deleteAppTemStorageDemo”, e.g. "XP270.001.deleteAppTemStorageDemo" ,  "XP270.002.deleteAppTemStorageDemo", etc.
 ![](./images/2.1.2-pic-02.png)
 ![](./images/2.1.2-pic-03.png)
 
 4.	Add the needed input keys so that the command can be triggered and executed successfully.
+
+**TIP:** **How to work with command's inputs and provide the correct input values following the previous screenshots**. 
+
+**- Working with static inputs**: To provide static inputs for your command (e.g. to provide the value `cf-eu10-004` for the input `region`) fist you need to slide the toggle for the required input (see screenshot below)
+![](/exercises/ex2/images/before-toggle_2.png)
+
+Once that is done - the "Default Value Source" should be set to `Static` and you can provide the needed static value within the field `Value`
+![](/exercises/ex2/images/after-toggle_2.png)
+
 What you need to specify within the commands input keys are just two inputs:
-- `method` to be set to `GET`
+- `method` to be set to `GET` (as a static imput)
 ![](./images/2.1.2-pic-06.png)
 - `url` - that is `{app_url}/delete-file` resulting in athe  app endpoint which can be called in order to delete the temp storage.
 ![](./images/2.1.2-pic-05.png)
@@ -33,26 +44,40 @@ What you need to specify within the commands input keys are just two inputs:
 **HINT:** `{app_url}` can be found via SAP BTP Cockpit as explained here: "BTP Cockpit" --> "Spaces" --> click on the desired space (in your use case you should be able to see just one space, so click on the spacenamed "prod") --> clik on the app name (e.g. `perfumeStore`) and you shall see the Applicaiton Overview scree. Check out the "Application Routers" URL - this is your App URL that shall be copied and used. 
 ![](./images/2.1.2-pic-04.png)
 
-**IMPORTANT**: How to work with input keys - see further details as per the screenshots below. 
-
-To add inputs for your command you need to make the inputs not required ones and add static values. 
-![](./images/inputKeys_2.6.png)
-![](./images/inputKeys_2.7.png)
 
 7.	Add the needed execution as shown below
-![](./images/04-02-automation-pilot.png)
+
 ![](./images/04-03-automation-pilot.png)
 ![](./images/2.1.2-pic-07.png)
 
-Once you are done with adding the correct values for your input keys you can proceed further. 
+Once you are done with adding the correct values for your input keys you can proceed further to model the command and specify which exact action to be triggered by the command.
 
-9.	Map the input keys to the execution you have created in the previous step:
+To specify the exact action for the command, you need to add a comand executor.
+7.1. To do so , navigate down to the command section named "Executors" and click on the "Add" button (see the screenshot below): 
+![](./images/04-02-automation-pilot.png)
+
+7.2. Now Click on the button `Here` as per the screenshot below and add the alias `restartApp` (it can be whaever alias which makes sense to you) and from the dropdown "Command" use the autocomplete form and search for this specific command out of the provided commands' catalog: `http-sapcp:HttpRequest:1`
+![](./images/inputKeys_2.6.png)
+![](./images/inputKeys_2.7.png)
+
+NOTE: Keep the "Automap parameters" toggle enabled so that your inputs can be mapped to the command automatically. Click on the button `Add` to save your changes.
+
+9.	Now your command should be ready and you can see the following paramters being mapped to the command executors:
 ![](./images/2.1.2-pic-08.png)
 
-10.	Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after running the command. Please follow the guidance shared below: 
+10. Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after running the command. Please follow the guidance shared below:
+- body (string): `$(.deleteAppTempStorage.output.body)`
+- headers (object): `$(.deleteAppTempStorage.output.headers)`
+- method (string): `$(.deleteAppTempStorage.output.method)`
+- size (number): `$(.deleteAppTempStorage.output.size)`
+- status (number): `$(.deleteAppTempStorage.output.status)`
+- time (number): `$(.deleteAppTempStorage.output.time)`
+- url (string): `$(.deleteAppTempStorage.output.url)`
+
+Once you are done with providing the output vlaues you should be able to see this screen:
 ![](./images/2.1.2-pic-09.png)
 
-12.	Command output keys will be printed here
+Note: Once the command gets triggered , the command output keys will be printed here:
 ![](./images/2.1.2-pic-10.png)
 
 Now you are ready to trigger the command manually or automatically via SAP Cloud ALM. 
