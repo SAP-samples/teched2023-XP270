@@ -40,10 +40,10 @@ This is an example of the inputs to be filled in:
 **TIP:** **How to work with command's inputs and provide the correct input values following the previous screenshots**. 
 
 **- Working with static inputs**: To provide static inputs for your command (e.g. to provide the value `cf-eu10-004` for the input `region`) fist you need to slide the toggle for the required input (see screenshot below)
-![](/exercises/ex2/images/before-toggle.png)
+![](/exercises/ex4/images/before-toggle.png)
 
 Once that is done - the "Default Value Source" should be set to `Static` and you can provide the needed static value within the field `Value`
-![](/exercises/ex2/images/after-toggle.png)
+![](/exercises/ex4/images/after-toggle.png)
 
 - **BTP Technical user:** to add the needed inputs for your BTP Technical user you need to follow these steps for both "user" and "password" (as the steps are identical):
 ![](/exercises/ex2/images/inputKeys_2.1.png)
