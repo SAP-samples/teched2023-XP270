@@ -33,9 +33,10 @@ The requirements to follow the exercises in this repository are:
 ## Exercises
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - Configure monitoring and alerting in SAP Cloud ALM](exercises/ex1/)
-- [Exercise 2 - Build self healing command](exercises/ex2/)
+- [Exercise 1 - Configure monitoring and alerting via SAP Cloud ALM](exercises/ex1/)
+- [Exercise 2 - Build self healing command with SAP Automation Pilot](exercises/ex2/)
 - [Exercise 3 - Check alert and resolve problem](exercises/ex3/)
+- [Exercise 4 - (Optional)  Build a command: "Restart App" via SAP Automation Pilot](exercises/ex4/)
   
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
