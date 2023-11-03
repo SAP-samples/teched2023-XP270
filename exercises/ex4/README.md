@@ -18,11 +18,11 @@
 ![](/exercises/ex4/images/autopi_search_command_2.png)
 ![](/exercises/ex4/images/autopi_search_command_3.png)
    
-4.	Access the command and clone it by adding it to the respective catalog `Welcome` as shown on the screenshot and name it as per this guidance `{your session ID}.(user ID).RestartCfAppDemo`, e.g. `XP270.001.RestartCfAppDemo" ,  "XP270.002.RestartCfAppDemo`, etc.
+3.	Access the command and clone it by adding it to the respective catalog `Welcome` as shown on the screenshot and name it as per this guidance `{your session ID}.(user ID).RestartCfAppDemo`, e.g. `XP270.001.RestartCfAppDemo" ,  "XP270.002.RestartCfAppDemo`, etc.
 ![](/exercises/ex2/images/03-automation-pilot.png)
 ![](/exercises/ex2/images/04-automation-pilot.png)
   	
-5.	Explore the setup of your BTP Technical User that is already made for you in SAP Automation Pilot. To do so - click on the “Inputs” section within the leftsidebar, then look for the inputs named `btpTechnicalUser` 
+4.	Explore the setup of your BTP Technical User that is already made for you in SAP Automation Pilot. To do so - click on the “Inputs” section within the leftsidebar, then look for the inputs named `btpTechnicalUser` 
 ![](/exercises/ex2/images/05-03-automation-pilot.png)
 
 > [!NOTE]
@@ -65,20 +65,20 @@ Once that is done - the "Default Value Source" should be set to `Static` and you
 
 Once you are done with adding the correct values for your input keys you can proceed further to model the command and specify which exact action to be triggered by the command.
 
-7.	To specify the exact action for the command, you need to add a comand executor.
-7.1. To do so , navigate down to the command section named "Executors" and click on the "Add" button (see the screenshot below): 
+6.	To specify the exact action for the command, you need to add a comand executor.
+6.1. To do so , navigate down to the command section named "Executors" and click on the "Add" button (see the screenshot below): 
 ![](/exercises/ex2/images/04-02-automation-pilot.png)
 
-7.2. Now Click on the button `Here` as per the screenshot below and add the alias `restartApp` (it can be whaever alias which makes sense to you) and from the dropdown "Command" use the autocomplete form and search for this specific command out of the provided commands' catalog: `applm-sapcp:RestartCfApp:1`
+6.2. Now Click on the button `Here` as per the screenshot below and add the alias `restartApp` (it can be whaever alias which makes sense to you) and from the dropdown "Command" use the autocomplete form and search for this specific command out of the provided commands' catalog: `applm-sapcp:RestartCfApp:1`
 ![](/exercises/ex2/images/04-03-automation-pilot.png)
 ![](/exercises/ex2/images/04-04-automation-pilot.png)
 
 NOTE: Keep the "Automap parameters" toggle enabled so that your inputs can be mapped to the command automatically.  
 
-8.	Now your command should be ready and you can see the following paramters being mapped to the command executors:
+7.	Now your command should be ready and you can see the following paramters being mapped to the command executors:
 ![](/exercises/ex2/images/05-automation-pilot.png)
 
-10.	Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after rinning the command. By default these are set to "none" but you can follow the guidance and create few:
+8.	Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after rinning the command. By default these are set to "none" but you can follow the guidance and create few:
 - previousDesiredState (string): `$(.restartApp.output.previousDesiredState)`
 - previousResourceInstancesState (array): `$(.restartApp.output.previousResourceInstancesState)`
 - previousResourceInstancesStates (array): `$(.restartApp.output.previousResourceInstancesStates)`
