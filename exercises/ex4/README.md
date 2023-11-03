@@ -6,6 +6,8 @@
 
  The command "Restart App" via SAP Automation Pilot can be triggered manually via CALM only in case the command for temp app storage deletion fails. 
 
+## Step-by-step guide
+
 1. Access your SAP Automation Pilot via SAP BTP cockpit  .
 ![](/exercises/ex2/images/01-accessing-automation-pilot.png)
 2.	Once you access the SAP Automation Pilot navigate to `Comands` section and search for a  command named `RestartCfApp`
