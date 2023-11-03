@@ -1,7 +1,10 @@
-# (Optional) Exercise 4 - Command: "Restart App" in SAP Automation Pilot 
+# Exercise 4 - (Optional)  Command: "Restart App" via SAP Automation Pilot 
 
-## Context
-This command is an optional one. It can be triggered manually via CALM only in case the command for temp app storage deletion fails. 
+## Exercise context
+> [!NOTE]
+> This command is an optional one in addition to Automation Pilot command ypu had configured in the previous exercise.
+
+ The command "Restart App" via SAP Automation Pilot can be triggered manually via CALM only in case the command for temp app storage deletion fails. 
 
 1. Access your SAP Automation Pilot via SAP BTP cockpit  .
 ![](/exercises/ex2/images/01-accessing-automation-pilot.png)
