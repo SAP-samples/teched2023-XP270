@@ -6,7 +6,7 @@ You inform the developer of the `perfumeStore` app of the disk utilization probl
 
 During this exercise you will create a command to clean the disk space using SAP Automation Pilot and register the command as operation flow in SAP Cloud ALM. 
 
-## Exercise 2.1. - Define commmands for an automated remediations via SAP Automation Plot   
+## Exercise 2.1. - Define commands for an automated remediations via SAP Automation Plot   
 
 ### Command: "Delete App Temp Storage" in SAP Automation Pilot 
 
@@ -18,7 +18,7 @@ During this exercise you will create a command to clean the disk space using SAP
 ![](./images/2.1.2-pic-01.png)
 
    
-3.	Access the command and clone by adding it to the respective catalog as shown on the screenshot and name it “{your session ID}.(user ID).deleteAppTemStorageDemo”, e.g. "XP270.001.deleteAppTemStorageDemo" ,  "XP270.002.deleteAppTemStorageDemo", etc.
+3.	Access the command and clone by adding it to the `Welcome` catalog as shown on the screenshot and name it “{your session ID}.(user ID).deleteAppTemStorageDemo”, e.g. "XP270.001.deleteAppTemStorageDemo" ,  "XP270.002.deleteAppTemStorageDemo", etc.
 ![](./images/2.1.2-pic-02.png)
 ![](./images/2.1.2-pic-03.png)
 
