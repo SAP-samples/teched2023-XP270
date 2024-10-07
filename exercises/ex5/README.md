@@ -21,6 +21,7 @@ To implement an integrated monitoring and automated incident response system for
 - Use the commands "GetCfAppState" and "GetCfAppEvents" to retrieve the latest app state and the most recent 20 events for your Cloud Foundry app.
 - Create a custom command to fetch the last 100 lines from the app's log file.
 - Generate a ticket in your Ticket Management System (e.g., Jira) with the collected app insights for faster troubleshooting.
+
 _Check the [provided content and available commands in SAP Automation Pilot](https://help.sap.com/docs/automation-pilot/automation-pilot/provided-catalogs?version=Cloud)_
 
 5. **Configure SAP Cloud ALM for Health Monitoring**: [In SAP Cloud ALM, enable health monitoring for app crashes](https://community.sap.com/t5/technology-blogs-by-sap/cloud-alm-health-monitoring-for-event-configuration/ba-p/13575560). Set the following actions:
