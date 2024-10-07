@@ -1,12 +1,11 @@
-# Description
+# Context
 
-You inform the developer of the `perfumeStore` app of the disk utilization problem. He advises to set couple of possible remediation actions and build automated flows for these such as: 
-- clear the diskspace as soon as it has exceeded a certain limit;
-- restart the app (in case the issue occurs over again) - **OPTIONAL**
+As already explaind in lesson "[Observing Your Apps Running](url)", you are implementing an integrated monitoring and automated incident response system for a cloud app deployed on SAP BTP, Cloud Foundry. Cloud Foundry Audit Events and app crash events are automatically collected by SAP Alert Notification and sent to SAP Cloud ALM for central problem detection. SAP Cloud ALM triggers alerts to the DevOps team and enables navigation to observability tools like SAP Cloud Logging for issue resolution. It can also trigger SAP Automation Pilot, which gathers logs, stores them in a ticket, and assigns it to the DevOps team for further action.
 
-During this exercise you will create a command to clean the disk space using SAP Automation Pilot and register the command as operation flow in SAP Cloud ALM. 
-
+All the interactions and products' intgerationd are visualised within the diagram shared below: 
 ![](/exercises/ex5/images/solution-overview.png)
+
+
 
 ## Define commands for an automated remediations via SAP Automation Plot   
 
