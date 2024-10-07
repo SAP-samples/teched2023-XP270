@@ -9,7 +9,8 @@ All the interactions and products' intgerationd are visualised within the diagra
 
 To implement an integrated monitoring and automated incident response system for your cloud app in SAP BTP, follow these steps:
 
-1. **Set up the integration between SAP Alert Notification service for SAP BTP and SAP Cloud ALM** [Integrate SAP Alert Notification with SAP Cloud ALM]([url](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/health-monitoring/health-monitoring-setup-configuration/health-monitoring-for-sap-btp-cf.html?anchorId=section_322971014_co)): Activate the switch in SAP Cloud ALM for "SAP BTP: Application Crash" to ensure crash events are automatically ingested.
+1. **Set up the integration between SAP Alert Notification service for SAP BTP and SAP Cloud ALM**
+[Integrate SAP Alert Notification with SAP Cloud ALM]([url](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/health-monitoring/health-monitoring-setup-configuration/health-monitoring-for-sap-btp-cf.html?anchorId=section_322971014_co)): Activate the switch in SAP Cloud ALM for "SAP BTP: Application Crash" to ensure crash events are automatically ingested.
 
 2.**Integrate SAP Automation Pilot with SAP Cloud ALM**: [Connect SAP Automation Pilot with SAP Cloud ALM to automate responses to incidents]([url](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/operation-automation/automation-pilot.html)).
 
