@@ -24,7 +24,7 @@ To implement an integrated monitoring and automated incident response system for
 
 _Check the [provided content and available commands in SAP Automation Pilot](https://help.sap.com/docs/automation-pilot/automation-pilot/provided-catalogs?version=Cloud)_
 
-5. **Configure SAP Cloud ALM for Health Monitoring**: [In SAP Cloud ALM, enable health monitoring for app crashes](https://community.sap.com/t5/technology-blogs-by-sap/cloud-alm-health-monitoring-for-event-configuration/ba-p/13575560). Set the following actions:
+5. **Configure SAP Cloud ALM for Health Monitoring**: [In SAP Cloud ALM, enable health monitoring for app crashes](https://shorturl.at/HFlaA). Set the following actions:
 - Send email notifications to the DevOps team for immediate awareness of the issue.
 - Trigger the automation flow in SAP Automation Pilot to gather logs and create a ticket for problem resolution.
 
