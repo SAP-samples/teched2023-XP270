@@ -5,112 +5,202 @@ As already explaind in lesson "[Observing Your Apps Running](url)", you are impl
 All the interactions and products' intgerationd are visualised within the diagram shared below: 
 ![](/exercises/ex5/images/solution-overview.png)
 
+## Steps needed for use case implementation   
+
+To implement an integrated monitoring and automated incident response system for your cloud app in SAP BTP, follow these steps:
+
+1. **Set up the integration between SAP Alert Notification service for SAP BTP and SAP Cloud ALM** [Integrate SAP Alert Notification with SAP Cloud ALM]([url](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/health-monitoring/health-monitoring-setup-configuration/health-monitoring-for-sap-btp-cf.html?anchorId=section_322971014_co)): Activate the switch in SAP Cloud ALM for "SAP BTP: Application Crash" to ensure crash events are automatically ingested.
+
+2.**Integrate SAP Automation Pilot with SAP Cloud ALM**: [Connect SAP Automation Pilot with SAP Cloud ALM to automate responses to incidents]([url](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/operation-automation/automation-pilot.html)).
+
+3.**Configure SAP Alert Notification to Collect Cloud Foundry Audit Events:** [Enable the SAP Alert Notification service to start collecting audit events from your Cloud Foundry app]([url](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/application-events)).
+
+4 **Create an Automation Flow in SAP Automation Pilot**: Design an automated response to app crashes by performing the following:
+- Use the commands "GetCfAppState" and "GetCfAppEvents" to retrieve the latest app state and the most recent 20 events for your Cloud Foundry app.
+- Create a custom command to fetch the last 100 lines from the app's log file.
+- Generate a ticket in your Ticket Management System (e.g., Jira) with the collected app insights for faster troubleshooting.
+_Check the [provided content and available commands in SAP Automation Pilot]([url](https://help.sap.com/docs/automation-pilot/automation-pilot/provided-catalogs?version=Cloud))_
+
+4. Configure SAP Cloud ALM for Health Monitoring: [In SAP Cloud ALM, enable health monitoring for app crashes]([url](https://community.sap.com/t5/technology-blogs-by-sap/cloud-alm-health-monitoring-for-event-configuration/ba-p/13575560)). Set the following actions:
+- Send email notifications to the DevOps team for immediate awareness of the issue.
+- Trigger the automation flow in SAP Automation Pilot to gather logs and create a ticket for problem resolution.
+
+By following these steps, you'll set up an integrated system for monitoring and automating responses to app crashes, ensuring quick detection and resolution.
 
 
-## Define commands for an automated remediations via SAP Automation Plot   
+### Define commands for an automated troubleshooting in SAP Automation Plot   
+Within this step you could benefit out of a custom command created in SAP Automation Pilot. See the exact command code that you can import directly in your SAP Automation Pilot. 
 
-### Command: "Delete App Temp Storage" in SAP Automation Pilot 
-
-1. Access your SAP Automation Pilot via SAP BTP cockpit  .
-![](./images/01-accessing-automation-pilot.png)
-
-2.	Once you access the SAP Automation Pilot navigate to “Comands” section search for a command named `HttpRequest`
-![](./images/command_search.png)
-![](./images/2.1.2-pic-01.png)
-
-   
-3.	Access the command and clone by adding it to the `Welcome` catalog as shown on the screenshot and name it “{your session ID}.(user ID).deleteAppTemStorageDemo”, e.g. "XP270.001.deleteAppTemStorageDemo" ,  "XP270.002.deleteAppTemStorageDemo", etc.
-![](./images/2.1.2-pic-02.png)
-![](./images/2.1.2-pic-03.png)
-
-4.	Add the needed input keys so that the command can be triggered and executed successfully.
-
-**TIP:** **How to work with command's inputs and provide the correct input values following the previous screenshots**. 
-
-**- Working with static inputs**: To provide static inputs for your command (e.g. to provide the value `cf-eu10-004` for the input `region`) fist you need to slide the toggle for the required input (see screenshot below)
-![](/exercises/ex2/images/before-toggle_2.png)
-
-Once that is done - the "Default Value Source" should be set to `Static` and you can provide the needed static value within the field `Value`
-![](/exercises/ex2/images/after-toggle_2.png)
-
-What you need to specify within the commands input keys are just two inputs:
-- `method` to be set to `GET` (as a static imput)
-![](./images/2.1.2-pic-06.png)
-- `url` - that is `{app_url}/delete-file` resulting in athe  app endpoint which can be called in order to delete the temp storage.
-![](./images/2.1.2-pic-05.png)
-
-> [!NOTE]
-> App endpoint to be called in order to delete the temp app storage is: `{app_url}/delete-file`
-
-**HINT:** `{app_url}` can be found via SAP BTP Cockpit as explained here: "BTP Cockpit" --> "Spaces" --> click on the desired space (in your use case you should be able to see just one space, so click on the spacenamed "prod") --> clik on the app name (e.g. `perfumeStore`) and you shall see the Applicaiton Overview scree. Check out the "Application Routers" URL - this is your App URL that shall be copied and used. 
-![](./images/2.1.2-pic-04.png)
-
-Once you are done with adding the correct values for your input keys you can proceed further to model the command and specify which exact action to be triggered by the command.
-
-5.	Add the needed executors to the command.
-To specify the exact action for the command, you need to add a comand executor.
-
-5.1. To do so , navigate down to the command section named "Executors" and click on the "Add" button (see the screenshot below):
-![](./images/04-02-automation-pilot.png)
-
-
-5.2.  Now Click on the button `Here` as per the screenshot below and add the alias `deleteAppTempStorage` (it can be whaever alias which makes sense to you) and from the dropdown "Command" use the autocomplete form and search for this specific command out of the provided commands' catalog: `http-sapcp:HttpRequest:1`
-![](./images/04-03-automation-pilot.png)
-![](./images/2.1.2-pic-07.png)
-
-**NOTE**: Keep the "Automap parameters" toggle enabled so that your inputs can be mapped to the command automatically. Click on the button `Add` to save your changes.
-
-6.	Now your command should be ready and you can see the following paramters being mapped to the command executors:
-![](./images/2.1.2-pic-08.png)
-
-7. Commands outputs values  – it is a good practice to prepare the needed command outputs so that you can check out what was the output after running the command. Please follow the guidance shared below:
-- body (string): `$(.deleteAppTempStorage.output.body)`
-- headers (object): `$(.deleteAppTempStorage.output.headers)`
-- method (string): `$(.deleteAppTempStorage.output.method)`
-- size (number): `$(.deleteAppTempStorage.output.size)`
-- status (number): `$(.deleteAppTempStorage.output.status)`
-- time (number): `$(.deleteAppTempStorage.output.time)`
-- url (string): `$(.deleteAppTempStorage.output.url)`
-
-Once you are done with providing the output vlaues you should be able to see this screen:
-![](./images/2.1.2-pic-09.png)
-
-Note: Once the command gets triggered , the command output keys will be printed here:
-![](./images/2.1.2-pic-10.png)
-
-Now you are ready to trigger the command manually or automatically via SAP Cloud ALM. 
-
-
-
-## Exercise - Register command as Operation Flow in SAP Cloud ALM  
-
-The previously defined command "Delete App Temp Storage"needs to be registered in SAP Cloud ALM so that SAP Cloud ALM can trigger it. 
-
-1. Logon to SAP Cloud ALM.
-
-2. Select “Operations Automation”.
-![](./images/2.2-pic-01.png)
-
-3. Select “Register Operation Flow”. Select “SAP Automation Pilot”.
-![](./images/2.2-pic-02.png)
-
-4. Type  XP270_XXX (replace XXX with your number ) in field endpoint.
-
-5. Select the F4 help in the ID field. Select the command you created earlier (XP270.XXX.deleteAppTemStorageDemo.)
-
-6. Leave input reference empty.
-
-7. Optionally enter a description.
-
-8. Select Use Case “Health Monitoring”.
-
-9. Select Ok.
-![](./images/2.2-pic03.png)
-
-10. Now the command should appear in the list of operation flows. 
+```
+{
+  "configuration": {
+    "values": [
+      {
+        "alias": "RegionData",
+        "valueFrom": {
+          "inputReference": "metadata-sapcp:CfRegionData:1",
+          "inputKey": "$(.execution.input.region)"
+        }
+      }
+    ],
+    "output": {
+      "recentLogs": "$(.CollectLogs.output.output[1:])"
+    },
+    "executors": [
+      {
+        "execute": "scripts-sapcp:ExecuteScript:2",
+        "input": {
+          "stdin": "$(.execution.input.password | toEscapedJson)",
+          "environment": "{\"CF_API\":\"$(.RegionData.cfApiUrl)\",\"CF_ORG\":\"$(.execution.input.subAccount)\",\"CF_SPACE\":\"$(.execution.input.resourceGroup)\",\"CF_APP\":\"$(.execution.input.resourceName)\",\"CF_USER\":\"$(.execution.input.user)\",\"CF_IDP\":\"$(.execution.input.identityProvider)\",\"CF_PASSWORD\":\"$(.execution.input.password | toEscapedJson)\"}",
+          "script": "set -e\n\n# echo \"Logging in to Cloud Foundry...\"\ncf login -a \"$CF_API\" --origin \"$CF_IDP\" -u \"$CF_USER\" -p \"$CF_PASSWORD\" -o \"$CF_ORG\" -s \"$CF_SPACE\"\n\n# Fetch recent logs for the specified CF app\ncf logs \"$CF_APP\" --recent\n"
+        },
+        "alias": "CollectLogs",
+        "description": null,
+        "progressMessage": null,
+        "initialDelay": null,
+        "pause": null,
+        "when": null,
+        "validate": null,
+        "autoRetry": null,
+        "repeat": null,
+        "errorMessages": [],
+        "dryRun": null
+      }
+    ],
+    "listeners": []
+  },
+  "id": "welcome-<<<TENANT_ID>>>:CollectRecentCfAppLogs:1",
+  "name": "CollectRecentCfAppLogs",
+  "description": "Restarts a Cloud Foundry application in a rolling manner or quickly, by stopping all instances simultaneously",
+  "catalog": "welcome-<<<TENANT_ID>>>",
+  "version": 1,
+  "inputKeys": {
+    "resourceGroup": {
+      "type": "string",
+      "sensitive": false,
+      "required": true,
+      "minSize": null,
+      "maxSize": null,
+      "minValue": null,
+      "maxValue": null,
+      "allowedValues": null,
+      "allowedValuesFromInputKeys": null,
+      "suggestedValues": null,
+      "suggestedValuesFromInputKeys": null,
+      "defaultValue": null,
+      "defaultValueFromInput": null,
+      "description": "Technical name of a Cloud Foundry Space, e.g.: my-space-demo-1"
+    },
+    "password": {
+      "type": "string",
+      "sensitive": true,
+      "required": true,
+      "minSize": null,
+      "maxSize": null,
+      "minValue": null,
+      "maxValue": null,
+      "allowedValues": null,
+      "allowedValuesFromInputKeys": null,
+      "suggestedValues": null,
+      "suggestedValuesFromInputKeys": null,
+      "defaultValue": null,
+      "defaultValueFromInput": null,
+      "description": "Cloud Foundry user's password"
+    },
+    "resourceName": {
+      "type": "string",
+      "sensitive": false,
+      "required": true,
+      "minSize": null,
+      "maxSize": null,
+      "minValue": null,
+      "maxValue": null,
+      "allowedValues": null,
+      "allowedValuesFromInputKeys": null,
+      "suggestedValues": null,
+      "suggestedValuesFromInputKeys": null,
+      "defaultValue": null,
+      "defaultValueFromInput": null,
+      "description": "Technical name of a Cloud Foundry application, e.g.: my-app"
+    },
+    "region": {
+      "type": "string",
+      "sensitive": false,
+      "required": true,
+      "minSize": null,
+      "maxSize": null,
+      "minValue": null,
+      "maxValue": null,
+      "allowedValues": null,
+      "allowedValuesFromInputKeys": null,
+      "suggestedValues": null,
+      "suggestedValuesFromInputKeys": null,
+      "defaultValue": null,
+      "defaultValueFromInput": null,
+      "description": " Technical name of a Cloud Foundry region (as defined in CfRegionData), e.g. cf-eu10, cf-br10, etc."
+    },
+    "user": {
+      "type": "string",
+      "sensitive": false,
+      "required": true,
+      "minSize": null,
+      "maxSize": null,
+      "minValue": null,
+      "maxValue": null,
+      "allowedValues": null,
+      "allowedValuesFromInputKeys": null,
+      "suggestedValues": null,
+      "suggestedValuesFromInputKeys": null,
+      "defaultValue": null,
+      "defaultValueFromInput": null,
+      "description": "UserID/Email of the Cloud Foundry user which will be used for authentication"
+    },
+    "subAccount": {
+      "type": "string",
+      "sensitive": false,
+      "required": true,
+      "minSize": null,
+      "maxSize": null,
+      "minValue": null,
+      "maxValue": null,
+      "allowedValues": null,
+      "allowedValuesFromInputKeys": null,
+      "suggestedValues": null,
+      "suggestedValuesFromInputKeys": null,
+      "defaultValue": null,
+      "defaultValueFromInput": null,
+      "description": "Technical name of a Cloud Foundry Organization, e.g.: my-org-name-1"
+    },
+    "identityProvider": {
+      "type": "string",
+      "sensitive": false,
+      "required": false,
+      "minSize": null,
+      "maxSize": null,
+      "minValue": null,
+      "maxValue": null,
+      "allowedValues": null,
+      "allowedValuesFromInputKeys": null,
+      "suggestedValues": null,
+      "suggestedValuesFromInputKeys": null,
+      "defaultValue": "sap.ids",
+      "defaultValueFromInput": null,
+      "description": "Identity provider to be used. By default it is SAP ID Service (sap.ids). To use a custom IdP, enter origin key from the CF Org/Space members section"
+    }
+  },
+  "outputKeys": {
+    "recentLogs": {
+      "type": "array",
+      "sensitive": false,
+      "description": null
+    }
+  },
+  "tags": {
+    "env": "cf"
+  }
+}
+```
 
 ## Summary
 
-You've now all commands for automated remediations modeled and stored in SAP Automation Pilot and also have integrated your SAP Cloud ALM to SAP Automation Pilot. Now the commands in questions can be triggered automatically or manually via Cloud ALM. 
-
-Continue to - [Exercise 3 - Check alert and resolve problem ](../ex3/README.md)
+You have now the command for automated troubleshooting modeled and stored in SAP Automation Pilot and also have integrated your SAP Cloud ALM to SAP Automation Pilot. Now the commands in questions can be triggered automatically or manually via Cloud ALM. 
